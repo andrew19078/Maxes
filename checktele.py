@@ -246,11 +246,12 @@ async def _(event):
                 try:
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
-                    await event.client.send_message("@isandreew", f'''
+                    await event.client.send_message(event.chat_id, "https://t.me/illl0o/3",caption=f'''
+                    
 تم الصيد (@{username})
 ꩜ عداد محاولات ↬  {trys}
-lD: @illl0
-lD: @isandreew
+lD: @illl0 
+lD × @isandreew
 
     ''')
 
@@ -259,7 +260,7 @@ lD: @isandreew
                     with open("banned.txt", "a") as f:
                         f.write(f"\n{username}")
                 except Exception as eee:
-                    await sython.send_message(event.chat_id, f'''خطأ مع {username}
+                    await sython.send_message(event.chat_id, f@'''خطأ مع {username}
     الخطأ :
     {str(eee)}''')
                     if "A wait of" in str(eee):
@@ -273,7 +274,7 @@ lD: @isandreew
         isclaim.clear()
         isclaim.append("off")
         trys = ""
-        await event.client.send_message(event.chat_id, "انتهى تم الصيد! ")
+        await event.client.send_message(event.chat_id,  "انتهى تم الصيد🗽 ")
         
 @sython.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
 async def _(event):
@@ -311,8 +312,7 @@ async def _(event):
                         await event.client.send_message(event.chat_id, f'''
 تم الصيد (@{username})
 ꩜ عداد محاولات ↬  {trys}
-lD: @illl0 
-lD × @isandreew
+@isAndreew - @illl0
 
     ''')
                         break
